@@ -9,4 +9,4 @@ Notice: Messages are updated when a user edits the readme and the PR gets accept
 
 # Screenshot:
 
-![alt text](macfetch/macfetch.png "Title")
+![alt text](macfetch.png "Title")
