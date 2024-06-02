@@ -62,7 +62,7 @@ if let command = executeCommand("uname -r") {
     print("\(apple05)Kernel: Darwin v\(command)")
 }
 // placeholder
-if let command = executeCommand("echo 69 days, 4 hours, 20 minutes") {
+if let command = executeCommand("system_profiler SPSoftwareDataType | grep \"Time since boot\" | sed 's/Time since boot:\\s*//'") {
     print("\(apple06)Uptime: \(command)")
 }
 // produces major lag
