@@ -73,13 +73,9 @@ if let command = executeCommand("echo $SHELL") {
     print("\(apple08)Shell: \(command)")
 }
 // "system_profiler" might lag
-/*if let command = executeCommand("system_profiler SPDisplaysDataType | grep Resolution") {
+if let command = executeCommand("system_profiler SPDisplaysDataType | grep Resolution") {
     print("\(apple09)\(command)")
-}*/ 
-// placeholder
-if let command = executeCommand("echo 4480 x 2520") {
-    print("\(apple09)Resolution: \(command)")
-}
+} 
 // placeholder
 if let command = executeCommand("echo Aqua") {
     print("\(apple10)DE: \(command)")
