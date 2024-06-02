@@ -21,7 +21,7 @@ let apple18:String=("                                 ")
 
 func executeCommand(_ command: String) -> String? {
     let process = Process()
-    process.executableURL = URL(fileURLWithPath: "/bin/bash")
+    process.executableURL = URL(fileURLWithPath: "/bin/bash") /* uses bash for compatibility reasons */
     process.arguments = ["-c", command]
     
     let outputPipe = Pipe()
@@ -46,59 +46,61 @@ func printCommandOutput(_ command: String) {
     }
 }
 
+print(apple01)
+
 if let command = executeCommand("echo $USER@$(hostname)") {
-    print("\(apple01)\(command)")
+    print("\(apple02)\(command)")
 }
-// placeholder, adaptable line is planned for the future
-print(apple02 + "--------------")
+
+// placeholder, adaptable line might be added in the future
+print(apple03 + "-----------------------------")
 
 if let command = executeCommand("sw_vers -productName && sw_vers -productVersion ") {
-    print("\(apple03)OS Name: \(command.replacingOccurrences(of: "\n", with: " "))"
+    print("\(apple04)OS:         \(command.replacingOccurrences(of: "\n", with: " "))"
 )
 if let command = executeCommand("sysctl -n hw.model") {
-    print("\(apple04)Host: \(command)")
+    print("\(apple05)Host:       \(command)")
 }
 if let command = executeCommand("uname -r") {
-    print("\(apple05)Kernel: Darwin v\(command)")
+    print("\(apple06)Kernel:     Darwin v\(command)")
 }
 // placeholder
 if let command = executeCommand("system_profiler SPSoftwareDataType | grep \"Time since boot\" | sed 's/Time since boot:\\s*//'") {
-    print("\(apple06)Uptime: \(command)")
+    print("\(apple07)Uptime:     \(command)")
 }
 // produces major lag
 if let command = executeCommand("brew list --versions | wc -l") {
-    print("\(apple07)Packages: \(command)")
+    print("\(apple08)Packages:   \(command)")
 }
 if let command = executeCommand("echo $SHELL") {
-    print("\(apple08)Shell: \(command)")
+    print("\(apple09)Shell:      \(command)")
 }
-// "system_profiler" might lag
+// might lag
 if let command = executeCommand("system_profiler SPDisplaysDataType | grep Resolution") {
-    print("\(apple09)\(command)")
+    print("\(apple10)\(command)")
 } 
 // placeholder
 if let command = executeCommand("echo Aqua") {
-    print("\(apple10)DE: \(command)")
+    print("\(apple11)DE:         \(command)")
 }
 // placeholder
 if let command = executeCommand("echo Aqua") {
-    print("\(apple11)WM: \(command)")
+    print("\(apple12)WM:         \(command)")
 }
 if let command = executeCommand("echo $TERM_PROGRAM") {
-    print("\(apple12)Terminal: \(command)")
+    print("\(apple13)Terminal:   \(command)")
 }
 if let command = executeCommand("sysctl -n machdep.cpu.brand_string") {
-    print("\(apple13)CPU: \(command)")
+    print("\(apple14)CPU:        \(command)")
 }
 // "cpu model" is used instead of "gpu model", "gpu model" does not exist
 if let command = executeCommand("sysctl -n machdep.cpu.brand_string") {
-    print("\(apple14)GPU: \(command)")
+    print("\(apple15)GPU:        \(command)")
 }
 // placeholder
 if let command = executeCommand("echo 1337MiB / 8192MiB ") {
-    print("\(apple15)Memory: \(command)")
+    print("\(apple16)Memory:     \(command)")
 }
-print(apple16)
 print(apple17)
 print(apple18)
 }
