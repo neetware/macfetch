@@ -118,3 +118,6 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Ignore compiled file
+macfetch
