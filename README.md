@@ -10,7 +10,7 @@ User submitted message: "Wow, this is super cool!" - You, probably
 
 ## Installation:
 
-### Build and add it to your $PATH 
+### Build it and add it to your $PATH 
 
 ```bash
 swiftc macfetch.swift -o macfetch
