@@ -2,8 +2,6 @@
 
 User submitted message: "Wow, this is super cool!" - You, probably
 
-# Screenshot:
-
 ![alt text](macfetch.png "Title")
 
 ## Requirements:
@@ -13,8 +11,6 @@ User submitted message: "Wow, this is super cool!" - You, probably
 ## Installation:
 
 ### Build and add it to your $PATH 
-
-Build the project and move it to /usr/local/bin
 
 ```bash
 swiftc macfetch.swift -o macfetch
