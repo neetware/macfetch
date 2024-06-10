@@ -1,1 +1,0 @@
-swiftc macfetch.swift -o macfetch && ./macfetch && rm macfetch
