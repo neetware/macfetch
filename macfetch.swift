@@ -97,10 +97,13 @@ if let command = executeCommand("sysctl -n machdep.cpu.brand_string") {
 if let command = executeCommand("sysctl -n machdep.cpu.brand_string") {
     print("\(apple15)GPU:        \(command)")
 }
-// ram amount in mib
-if let command = executeCommand("system_profiler SPHardwareDataType | grep \"Memory:\" | awk '{print $2}' | sed 's/GB//g' | awk '{print $1 * 1024}'") {
-    print("\(apple16)Memory:     \(Int(command)!) MiB / \(command) MiB")
+// system ram
+if let command = executeCommand("system_profiler SPHardwareDataType | grep \"Memory:\" | awk '{print $2}' | sed 's/GB//g'") {
+    if let command2 = executeCommand("sysctl -n hw.usermem | awk '{printf(\"%d\", $1 / 1024 / 1024)}'") {
+        print("\(apple16)Memory:     \(command2) MiB / \(Int(command)! * 1024) MiB")
+    }
 }
+
 print(apple17)
 print(apple18)
 }
