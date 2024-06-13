@@ -4,10 +4,6 @@ User submitted message: "Wow, this is super cool!" - You, probably
 
 ![alt text](macfetch.png "Title")
 
-# To Do List:
-
-- [ ] Ram usage output
-
 ## Requirements:
 
 - [Swift 5.0](https://swift.org/download/)
@@ -29,4 +25,4 @@ macfetch
 
 ## Supporters:
 [![Stargazers repo roster for @neetware/macfetch](https://reporoster.com/stars/neetware/macfetch)](https://github.com/neetware/macfetch/stargazers)
-[![Forkers repo roster for @paretoprinciple/macfetch](https://reporoster.com/forks/neetware/macfetch)](https://github.com/neetware/macfetch/network/members)
+[![Forkers repo roster for @neetware/macfetch](https://reporoster.com/forks/neetware/macfetch)](https://github.com/neetware/macfetch/network/members)
